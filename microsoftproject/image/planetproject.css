@@ -1,0 +1,50 @@
+.header, .main-nav{
+    display: flex;
+    flex-direction: column;
+}
+
+.header{
+    justify-content: space-between;
+}
+
+.main-nav{
+    flex: 1;
+    justify-content: space-around;
+}
+
+@media all and (max-width:650px){
+    .header, .main-nav{
+        flex-direction: row;
+    }
+}
+
+@media all and (max-width:1050px){
+    .main-nav{
+        flex: none;
+    }
+}
+
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: url(/cssflex/project/planet-project/html/slide1.png)top center no-repeat;
+    background-size: cover;
+}
+
+.header{
+    padding: 20px 0;
+    margin: 0 auto;
+}
+
+.main-nav{
+    list-style-type: none;
+}
+
+.main-nav li{
+    margin: 0 12px 30px;
+}
+
+.main-nav li a {
+    text-decoration: none;
+    color: #fff;
+}

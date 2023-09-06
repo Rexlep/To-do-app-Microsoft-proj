@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      nav {
+        background-color: #f1f1f1;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+      }
+
+      .logo {
+        font-size: 20px;
+        margin-right: auto;
+      }
+
+      .ul-container {
+        display: flex;
+        list-style-type: none;
+        padding: 0;
+      }
+
+      .ul-container li {
+        margin-right: 10px;
+      }
+
+      .ul-container-icon {
+        display: none;
+        font-size: 20px;
+        cursor: pointer;
+      }
+
+      @media (max-width: 700px) {
+        .ul-container {
+          display: none;
+        }
+
+        .ul-container-icon {
+          display: block;
+        }
+
+        .ul-container-icon:hover {
+          background-color: rgba(0, 0, 0, 0.1);
+        }
+
+        .ul-container-icon.open {
+          background-color: rgba(0, 0, 0, 0.2);
+        }
+
+        .ul-container-icon.open + .ul-container {
+          display: block;
+        }
+
+        .ul-container li {
+          display: block;
+          margin-bottom: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <body>
+      <nav>
+        <div class="logo">Your Logo</div>
+        <ul class="menu">
+          <li>Home</li>
+          <li>About</li>
+          <li>Contact</li>
+          <li>Services</li>
+        </ul>
+        <div class="menu-icon">&#9776;</div>
+      </nav>
+
+      <!-- Rest of your page content -->
+      <script>
+        document
+          .querySelector(".menu-icon")
+          .addEventListener("click", function () {
+            this.classList.toggle("open");
+          });
+      </script>
+    </body>
+  </body>
+</html>
